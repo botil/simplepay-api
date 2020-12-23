@@ -1,0 +1,45 @@
+{
+    "name": "simplepay/simplepay-api",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/simplepay/simplepay-api",
+    "keywords": ["Laravel", "SimplepayApi"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Simplepay\\SimplepayApi\\": "src/"
+        },
+        "files": [
+            "src/External/SimplePayV21.php"
+        ]
+
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Simplepay\\SimplepayApi\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simplepay\\SimplepayApi\\SimplepayApiServiceProvider"
+            ],
+            "aliases": {
+                "SimplepayApi": "Simplepay\\SimplepayApi\\Facades\\SimplepayApi"
+            }
+        }
+    }
+}
